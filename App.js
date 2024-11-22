@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button, TextInput } from 'react-native-web';
+import TaskCard from './TaskCars';
+TaskCard
 
 export default function App() {
   return (
@@ -19,10 +21,17 @@ export default function App() {
         color='darkgreen'
         onPress={
           () => {
-            alert('MEU NOME É LEANDRO')
+            alert('Eu nao sei o meu nom')
           }
         }/>
       </View>
+      <TaskCard 
+      title={"Teste"}
+      desc={"Descrição Teste"}
+      status={"Done"}
+      onClick={()=>{
+        alert("Deletar")
+      }}/>
     </View>
   );
 }
